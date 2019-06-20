@@ -54,7 +54,7 @@ nav{
     }
 }
 div#blogRow{
-    padding:10px;
+    padding-top:10px;
 }
 
 
@@ -72,8 +72,8 @@ a.articleLink>article{
 a.articleLink>article:hover{
     transform:scale(1.05);
 }
-article>header>img{
-    padding-bottom:5px;
+article>header>h2{
+    padding-top:5px;
 }
 article>header{
     text-align:center;
@@ -131,6 +131,8 @@ article:hover{
 #foot>.row{
     padding-top:10px;
 }
+
+
 #foot {
     text-align: center;
     width: 100%;
