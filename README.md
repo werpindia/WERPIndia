@@ -1,21 +1,30 @@
 # WERPIndia
 WERP India Web Development Internship Project
 
-## Images links for carousel:
-Original:https://quotereel.com/wp-content/uploads/2018/05/Women-Empowerment-Quotes-1.jpg
-Resized:https://i.ibb.co/4MvBfYC/carousel.jpg
+
+## Images' links for carousel (Resized to 1280X519):
+Original:https://quotefancy.com/media/wallpaper/3840x2160/1088683-Amartya-Sen-Quote-Empowering-women-is-key-to-building-a-future-we.jpg
+Resized:https://i.ibb.co/M8r6hS1/carousel3.jpg
 
 Original:https://govori.se/media/cache/upload/Photo/2018/01/22/ja04_36_psihologija_1_sh_fbimage.jpg
 Resized:https://i.ibb.co/wJBpqh3/carousel1.jpg
 
+Original:https://quotereel.com/wp-content/uploads/2018/05/Women-Empowerment-Quotes-1.jpg
+Resized:https://i.ibb.co/4MvBfYC/carousel.jpg
+
+Original:https://quotefancy.com/media/wallpaper/3840x2160/1544149-Mahnaz-Afkhami-Quote-Women-s-empowerment-is-intertwined-with.jpg
+Resized:https://i.ibb.co/sgKbcZV/carousel4.jpg
+
 Original:https://2.bp.blogspot.com/-pjPTvPoR44M/WdMjOsXRQwI/AAAAAAAAAOw/8wl53jgeCSEOLIMuxWJfK_mCEZ9FNx3uQCLcBGAs/s1600/Woman-Silhouette-HD-Wallpaper-Free.jpg
 Resized:https://i.ibb.co/gdbHbs5/carousel2.png
 
-Original:https://ak3.picdn.net/shutterstock/videos/26242253/thumb/12.jpg
+
+## Image Link for Navbar logo:
+http://www.werpindia.org/images/logo.jpg
 
 
 ## Layout:
-- Carousel on top with 4 images
+- Carousel on top with 5 images
 - Navbar ```<nav>``` below the carousel with:
     - Brand logo
     - Links (which collapse into hamburger icon for xs,sm,md devices)
