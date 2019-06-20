@@ -16,7 +16,7 @@ Original:https://ak3.picdn.net/shutterstock/videos/26242253/thumb/12.jpg
 
 ## Layout:
 - Carousel on top with 4 images
-- Navbar *<nav>* below the carousel with:
+- Navbar ```html<nav>``` below the carousel with:
     - Brand logo
     - Links (which collapse into hamburger icon for xs,sm,md devices)
 - Container <div class="container"> for blogs. It has a single row
