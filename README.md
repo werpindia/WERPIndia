@@ -16,25 +16,25 @@ Original:https://ak3.picdn.net/shutterstock/videos/26242253/thumb/12.jpg
 
 ## Layout:
 - Carousel on top with 4 images
-- Navbar ```html<nav>``` below the carousel with:
+- Navbar ```<nav>``` below the carousel with:
     - Brand logo
     - Links (which collapse into hamburger icon for xs,sm,md devices)
-- Container <div class="container"> for blogs. It has a single row
+- Container ```<div class="container">``` for blogs. It has a single row
 - Single col for xs,sm devices, 2 cols for md devices, and 3 cols for lg,xl devices
 - Each col contains several articles
 - Description of each blog article:
-    - An anchor tag <a> surrounding the entire article. Clicking on an article should take to the full post.
-    - <article> tag inside anchor tag
-    - In each <article>, we have:
-        - A header tag containing <h2> and <img> for the blog.
-        - A <p> tag containing the first few lines from the blog.
-- <footer> at the bottom, containing contact details and map.
+    - An anchor tag ```<a>``` surrounding the entire ```<article>```. Clicking on an article should take to the full post.
+    - ```<article>``` tag inside anchor tag
+    - In each ```<article>```, we have:
+        - A ```<header>``` tag containing ```<h2>``` and ```<img>``` for the blog.
+        - A ```<p>``` tag containing the first few lines from the blog.
+- ```<footer>``` at the bottom, containing contact details and map.
 
 
 ## Custom Ids and Classes:
 - "topCarousel" id for the carousel
 - "myCarousel" id for carousel-inner(the content of carousel)
-- "blogRow" id for the <div class="row"> inside the container
-- "articleLink" class for <a> tags surrounding <article>
-- "fade" class for <img> inside <article>
-- "foot" id for <footer>
+- "blogRow" id for the ```<div class="row">``` inside the container
+- "articleLink" class for ```<a>``` tags surrounding ```<article>```
+- "fade" class for ```<img>``` inside ```<article>```
+- "foot" id for ```<footer>```
