@@ -25,6 +25,7 @@ http://www.werpindia.org/images/logo.jpg
 
 ## Layout:
 - Carousel on top with 5 images
+- Marquee for updates below the carousel
 - Navbar ```<nav>``` below the carousel with:
     - Brand logo
     - Links (which collapse into hamburger icon for xs,sm,md devices)
