@@ -21,19 +21,19 @@ body{
 /* Make the image fully responsive */
 .carousel-inner img {
     width: 100%;
-    /*max-height: 80vh;*/
 }
-/*#transbox{
-    position: absolute;
-    width:60%;
-    z-index:10;
-    text-align:center;
-    border:1px solid black;
-    border-radius:5px;
-    background:rgba(255,255,255,0.3);
-}*/
 
 
+/*Marquee below carousel*/
+.marquee {
+    background:#eee;
+    overflow:hidden;
+    white-space: nowrap;
+    font-style:italic;
+}
+
+
+/*To fit navbar logo correctly for mobile devices*/
 @media screen and (max-width:554px){
     nav .navbar-brand img{
         max-width:250px;
@@ -48,6 +48,7 @@ nav{
     margin-top:10px;margin-bottom:10px;
     background-image:linear-gradient(to right,#C5D2DB,rgb(184,206,221),#E7B183) ;
 }
+/*Removing margin-top and margin-bottom (set above) for mobile devices so that background image covers entire viewport below navbar*/
 @media screen and (max-width:576px){
     .container{
         margin:auto;
@@ -66,6 +67,7 @@ a.articleLink{
     color:inherit;
     text-decoration:none;
 }
+/*Raise the article on hover*/
 a.articleLink>article{
     transition:all .2s ease-in-out;
 }
@@ -86,14 +88,17 @@ article>p{
     padding:15px;
     text-decoration: none;
 }
+/*shadow effect for article on hover*/
 article:hover{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+/*For mobile devices, make shadow effect default and not on hover*/
 @media screen and (max-width:576px){
     article{
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 }
+/*For tablets and large devices, add blog image focus effect on hover*/
 @media screen and (min-width:768px){
     .focus{
         transition: all 1s ease;
@@ -133,6 +138,7 @@ article:hover{
 }
 
 
+/*Styling the footer*/
 #foot {
     text-align: center;
     width: 100%;
