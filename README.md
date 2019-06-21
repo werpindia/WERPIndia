@@ -43,7 +43,15 @@ http://www.werpindia.org/images/logo.jpg
 ## Custom Ids and Classes:
 - "topCarousel" id for the carousel
 - "myCarousel" id for carousel-inner(the content of carousel)
+- "marquee" class for updates' marquee below carousel
+- "marqueeText" class for ```<span>``` inside marquee
+- "marqueeAnchor" class for ```<a>``` surrounding marqueeText
 - "blogRow" id for the ```<div class="row">``` inside the container
 - "articleLink" class for ```<a>``` tags surrounding ```<article>```
 - "fade" class for ```<img>``` inside ```<article>```
 - "foot" id for ```<footer>```
+
+
+## Note:
+- All links have target as "#" by default during UI designing
+- Lorem Ipsum dummy text is used for the content, initially
