@@ -47,6 +47,11 @@ http://www.werpindia.org/images/logo.jpg
 - "marquee" class for updates' marquee below carousel
 - "marqueeText" class for ```<span>``` inside marquee
 - "marqueeAnchor" class for ```<a>``` surrounding marqueeText
+- "navBar" class for ```<nav>```
+- "navBrand" class for ```<div>``` inside ```<nav>```
+- "hamburger" class for hamburger icon inside ```<nav>```
+- "navList" class for navigation menu inside ```<nav>```
+- "navListMobile" class for navigation menu for mobile devices
 - "blogRow" id for the ```<div class="row">``` inside the container
 - "articleLink" class for ```<a>``` tags surrounding ```<article>```
 - "fade" class for ```<img>``` inside ```<article>```
