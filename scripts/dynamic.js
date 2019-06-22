@@ -35,6 +35,11 @@ $(document).ready(function(){
         startVisible: false
     });
 
+    //hamburger icon and menu control for mobile devices
+    $(".hamburger").click(function(){
+        $(this).toggleClass("change");
+        $(".navListMobile").toggle(500);
+    });
     //Enable Swipe Left/Right action for carousel on mobile devices
     /*$(".carousel-inner").swiperight(function(){  
         $(this).parent().carousel('prev');  
