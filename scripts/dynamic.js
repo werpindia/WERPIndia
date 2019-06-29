@@ -1,3 +1,10 @@
+//Blog arrangement using "Isotope" (only after all images/videos are loaded)
+$(window).on("load",function(){
+    $(".blogRow").isotope({
+        itemSelector:'.blogColumn'
+    });
+});
+
 $(document).ready(function(){
     //Removing extra spaces due to p tags in each article in blog list page
     let elem1=document.getElementsByClassName("articleLink");
@@ -10,14 +17,14 @@ $(document).ready(function(){
     }
     
     //Prevent video overflow in blog list  
-    let list=document.getElementsByClassName("articleVideo");
+    /*let list=document.getElementsByClassName("articleVideo");
     let len=list.length;
     for(let i=0;i<len;i++){
         list[i].style.maxWidth=list[i].parentElement.offsetWidth+"px";
-    }
+    }*/
 
     //Blog arrangement
-    let elem=document.getElementsByClassName("blogColumn");
+    /*let elem=document.getElementsByClassName("blogColumn");
     let len1=elem.length;
     let i1;
     for(i1=0;i1<len1-1;i1++){
@@ -26,8 +33,8 @@ $(document).ready(function(){
     }
     if(i1>=0&&len1>=1){
         elem[i1].style.height=elem[i1].firstElementChild.firstElementChild.offsetHeight+33+"px";
-    }
-
+    }*/
+    
     //Marquee effects
     $('.marquee').marquee({
         //If you wish to always animate using jQuery
