@@ -21,6 +21,7 @@ Resized:https://i.ibb.co/gdbHbs5/carousel2.png
 
 ## Image Link for Navbar logo:
 http://www.werpindia.org/images/logo.jpg
+https://i.ibb.co/ZNDm012/logo.jpg
 
 
 ## Layout:
@@ -39,23 +40,6 @@ http://www.werpindia.org/images/logo.jpg
         - A ```<header>``` tag containing ```<h2>``` and ```<img>``` for the blog.
         - A ```<p>``` tag containing the first few lines from the blog.
 - ```<footer>``` at the bottom, containing contact details and map.
-
-
-## Custom Ids and Classes:
-- "topCarousel" id for the carousel
-- "myCarousel" id for carousel-inner(the content of carousel)
-- "marquee" class for updates' marquee below carousel
-- "marqueeText" class for ```<span>``` inside marquee
-- "marqueeAnchor" class for ```<a>``` surrounding marqueeText
-- "navBar" class for ```<nav>```
-- "navBrand" class for ```<div>``` inside ```<nav>```
-- "hamburger" class for hamburger icon inside ```<nav>```
-- "navList" class for navigation menu inside ```<nav>```
-- "navListMobile" class for navigation menu for mobile devices
-- "blogRow" id for the ```<div class="row">``` inside the container
-- "articleLink" class for ```<a>``` tags surrounding ```<article>```
-- "fade" class for ```<img>``` inside ```<article>```
-- "foot" id for ```<footer>```
 
 
 ## Note:
