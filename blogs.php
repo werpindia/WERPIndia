@@ -39,7 +39,7 @@
 
         <!--Blogs-->
         <div class="container">
-            <div class="row" id="blogRow">
+            <div class="row blogRow">
                 <?php
                     if($_GET['userId']!=null){
                         $var=$_GET['userId'];
@@ -69,7 +69,7 @@
                                         if($res['type']=='image'){     
                                 echo '<img class="img-fluid rounded focus" src="'.$path.'"/>';
                                 } else {
-                                echo '<video class="articleVideo" src="'.$path.'" controls="controls">';
+                                echo '<video class="articleVideo" src="'.$path.'" controls="controls" style="width:100%;">';
                                 echo '</video>';
                                 } }
                                 echo '<h2>'.$row['title'].'</h2>';
