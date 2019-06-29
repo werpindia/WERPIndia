@@ -1,0 +1,75 @@
+.container{
+    margin-top:10px;margin-bottom:10px;
+    /*background-image:linear-gradient(to right,#C5D2DB,rgb(184,206,221),#E7B183);*/
+}
+body{
+    background-image:linear-gradient(to right,#C5D2DB,rgb(184,206,221),#E7B183) ;
+}
+/*Removing margin-top and margin-bottom (set above) for mobile devices so that background image covers entire viewport below navbar*/
+@media screen and (max-width:576px){
+    .container{
+        margin:auto;
+    }
+}
+div#blogRow{
+    padding-top:10px;
+}
+
+
+article{
+    border-radius:5px;
+    font-family:"Open Sans",Arial,sans-serif;
+}
+a.articleLink{
+    color:inherit;
+    text-decoration:none;
+}
+/*Raise the article on hover*/
+a.articleLink>article{
+    transition:all .2s ease-in-out;
+}
+a.articleLink>article:hover{
+    transform:scale(1.05);
+}
+article>header>h2{
+    padding:5px 5px 0 5px;
+}
+article>header>img{
+    padding-top:10px;
+}
+article>header>video{
+    padding-top:10px;
+}
+article>header{
+    text-align:center;
+    font-style: italic;
+    font-family:aclonica;
+}
+article>p{
+    text-align:justify;
+    text-justify: newspaper;
+    padding:15px;
+    text-decoration: none;
+}
+/*shadow effect for article on hover*/
+article:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/*For mobile devices, make shadow effect default and not on hover*/
+@media screen and (max-width:576px){
+    article{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+}
+/*For tablets and large devices, add blog image focus effect on hover*/
+@media screen and (min-width:768px){
+    .focus{
+        border:0px solid #E7B183;
+        border-radius:0; 
+        transition: all 1s ease;
+    }
+    .focus:hover{
+       border: 60px solid #E7B183;
+       border-radius: 50%;
+    }
+}
