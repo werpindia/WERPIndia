@@ -11,7 +11,7 @@ body{
         margin:auto;
     }
 }
-div#blogRow{
+div.blogRow{
     padding-top:10px;
 }
 
@@ -35,6 +35,7 @@ article>header>h2{
     padding:5px 5px 0 5px;
 }
 article>header>img{
+    width:100%;
     padding-top:10px;
 }
 article>header>video{
@@ -69,7 +70,7 @@ article:hover{
         transition: all 1s ease;
     }
     .focus:hover{
-       border: 60px solid #E7B183;
+       border: 50px solid #E7B183;
        border-radius: 50%;
     }
 }
