@@ -89,9 +89,9 @@
 
         <!--Blogs-->
         <div class="container">
-            <div class="row" id="blogRow">
+            <div class="row blogRow">
 
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 blogColumn">
                     <a class="articleLink" href="#">
                         <article>
                             <header>
@@ -114,7 +114,7 @@
                     <hr/>
                 </div>
 
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 blogColumn">
                     <a class="articleLink" href="#">
                         <article>
                             <header>
@@ -137,7 +137,7 @@
                     <hr/>
                 </div>
 
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 blogColumn">
                     <a class="articleLink" href="#">
                         <article>
                             <header>
