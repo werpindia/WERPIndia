@@ -67,10 +67,10 @@ article:hover{
     .focus{
         border:0px solid #E7B183;
         border-radius:0; 
-        transition: all 1s ease;
+        transition: all 0.4s ease;
     }
     .focus:hover{
-       border: 50px solid #E7B183;
-       border-radius: 50%;
+        border: 30px solid #E7B183;
+        border-radius: 50%;
     }
 }
