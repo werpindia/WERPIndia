@@ -17,13 +17,13 @@
 
 
         <div class="container" style="margin-top:20px;">
-        <?php if($_GET['login_error']){ ?>
+        <?php if(isset($_GET['login_error'])){ ?>
             <div class="alert alert-danger alert-dismissible fade show">
             <button type="button" class="close" data-dismiss="alert">&times;</button>
             <strong><?php echo $_GET['login_error']; ?></strong>
             </div>
         <?php } ?>
-        <?php if($_GET['signup_error']){ ?>
+        <?php if(isset($_GET['signup_error'])){ ?>
             <div class="alert alert-danger alert-dismissible fade show">
             <button type="button" class="close" data-dismiss="alert">&times;</button>
             <strong><?php echo $_GET['signup_error']; ?></strong>
