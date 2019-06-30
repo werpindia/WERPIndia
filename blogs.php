@@ -39,14 +39,28 @@
 
         <!--Blogs-->
         <div class="container">
+            <?php
+                //Pagination query
+                if (isset($_GET['pageno'])) {
+                    $pageno = $_GET['pageno'];
+                } else {
+                    $pageno = 1;
+                }
+                $no_of_records_per_page=10;
+                $offset=($pageno-1)*$no_of_records_per_page;
+                $total_pages_query="SELECT COUNT(*) FROM blogs WHERE status='posted'";
+                $run_total_pages_query=mysqli_query($con,$total_pages_query) or die(mysqli_error($con));
+                $total_rows = mysqli_fetch_array($run_total_pages_query)[0];
+                $total_pages = ceil($total_rows / $no_of_records_per_page);
+            ?>
             <div class="row blogRow">
                 <?php
-                    if($_GET['userId']!=null){
+                    if(isset($_GET['userId'])){
                         $var=$_GET['userId'];
-                        $query="SELECT ub.blog_id,b.id,b.file_id,b.title,b.description FROM users_blogs ub INNER JOIN blogs b ON ub.blog_id=b.id WHERE ub.user_id='$var' AND b.status='posted'"; 
+                        $query="SELECT ub.blog_id,b.id,b.file_id,b.title,b.description FROM users_blogs ub INNER JOIN blogs b ON ub.blog_id=b.id WHERE ub.user_id='$var' AND b.status='posted' ORDER BY b.id DESC LIMIT $offset, $no_of_records_per_page"; 
                     }
                     else{ 
-                        $query="SELECT * FROM blogs WHERE status='posted'";
+                        $query="SELECT * FROM blogs WHERE status='posted' ORDER BY id DESC LIMIT $offset, $no_of_records_per_page";
                     }
                     $run_query=mysqli_query($con,$query) or die(mysqli_error($con));
                     $num_rows=mysqli_num_rows($run_query);
@@ -74,12 +88,23 @@
                                 } }
                                 echo '<h2>'.$row['title'].'</h2>';
                             echo '</header>';
-                            echo '<p>'.substr($row['description'],0,100).'... Read More'.'</p>';
+                            echo '<p>'.substr($row['description'],0,200).'... Read More'.'</p>';
                         echo '</article>';
                     echo '</a>';
                     echo '<hr/>';
                 echo '</div>';}?>
             </div>
+            <!--Pagination bar-->
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="?pageno=1">First</a></li>
+                <li class="page-item <?php if($pageno<=1){ echo 'disabled'; } ?>">
+                    <a class="page-link" href="<?php if($pageno<=1){ echo '#'; } else { echo "?pageno=".($pageno - 1); } ?>">Prev</a>
+                </li>
+                <li class="page-item <?php if($pageno>=$total_pages){ echo 'disabled'; } ?>">
+                    <a class="page-link" href="<?php if($pageno>=$total_pages){ echo '#'; } else { echo "?pageno=".($pageno+1); } ?>">Next</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="?pageno=<?php echo $total_pages; ?>">Last</a></li>
+            </ul>
         </div>
 
 
