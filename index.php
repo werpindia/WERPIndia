@@ -62,28 +62,6 @@
 
 
         <!--Navbar-->
-        <!--nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-            <a class="navbar-brand" href="#"><img class="d-inline-block align-top img-fluid" src="http://www.werpindia.org/images/logo.jpg"/></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About Us</a>
-                    </li>
-                </ul>
-            </div>
-        </nav-->
-
-
-        <!--Navbar-->
         <?include "includes/header.php";?>
 
 
@@ -91,74 +69,39 @@
         <div class="container">
             <div class="row blogRow">
 
-                <div class="col-md-6 col-lg-4 blogColumn">
-                    <a class="articleLink" href="#">
-                        <article>
-                            <header>
-                                <img class="img-fluid rounded focus" src="https://picsum.photos/400"/>
-                                <h2>Tycb Hexyvb2</h2>
-                            </header>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                        </article>
-                    </a>
-                    <hr/>
-                    <a class="articleLink" href="#">
-                        <article>
-                            <header>
-                                <img class="img-fluid rounded focus" src="https://picsum.photos/1024/768"/>
-                                <h2>Tycb Hexyvb2</h2>
-                            </header>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                        </article>
-                    </a>
-                    <hr/>
-                </div>
-
-                <div class="col-md-6 col-lg-4 blogColumn">
-                    <a class="articleLink" href="#">
-                        <article>
-                            <header>
-                                <img class="img-fluid rounded focus" src="https://picsum.photos/800/600"/>
-                                <h2>Tycb Hexyvb2</h2>
-                            </header>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                        </article>
-                    </a>
-                    <hr/>
-                    <a class="articleLink" href="#">
-                        <article>
-                            <header>
-                                <img class="img-fluid rounded focus" src="https://picsum.photos/200"/>
-                                <h2>Tycb Hexyvb2</h2>
-                            </header>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                        </article>
-                    </a>
-                    <hr/>
-                </div>
-
-                <div class="col-md-6 col-lg-4 blogColumn">
-                    <a class="articleLink" href="#">
-                        <article>
-                            <header>
-                                <img class="img-fluid rounded focus" src="https://picsum.photos/1366/768"/>
-                                <h2>Tycb Hexyvb2</h2>
-                            </header>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                        </article>
-                    </a>                   
-                    <hr/>
-                    <a class="articleLink" href="#">
-                        <article>
-                            <header>
-                                <img class="img-fluid rounded focus" src="https://picsum.photos/640/360"/>
-                                <h2>Tycb Hexyvb2</h2>
-                            </header>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                        </article>
-                    </a>
-                    <hr/>
-                </div>
+            <?php 
+                $query="SELECT * FROM blogs WHERE status='posted' ORDER BY id DESC LIMIT 10";
+                $run_query=mysqli_query($con,$query) or die(mysqli_error($con));
+                $num_rows=mysqli_num_rows($run_query);
+                if($num_rows==0){
+                    header('location:error.php');
+                }
+                while($row=mysqli_fetch_array($run_query)){
+                echo '<div class="col-md-6 col-xl-4 blogColumn">';
+                    echo '<a class="articleLink" href="show.php?blogId=';echo $row['id'].'" target="_blank">';
+                        echo '<article>';
+                            echo '<header>';
+                                if($row['file_id']==null){
+                                    echo '<img class="img-fluid rounded focus" src="https://i.ibb.co/ZNDm012/logo.jpg"/>';
+                                }else{
+                                    $fileId=$row['file_id'];
+                                    $q="SELECT * FROM uploads WHERE id='$fileId'";
+                                    $run_q=mysqli_query($con,$q) or die(mysqli_error($con));   
+                                    $res=mysqli_fetch_array($run_q);
+                                    $path="uploads/".$res['name'];
+                                    if($res['type']=='image'){     
+                                echo '<img class="img-fluid rounded focus" src="'.$path.'"/>';
+                                } else {
+                                echo '<video class="articleVideo" src="'.$path.'" controls="controls" style="width:100%;">';
+                                echo '</video>';
+                                } }
+                                echo '<h2>'.$row['title'].'</h2>';
+                            echo '</header>';
+                            echo '<p>'.substr($row['description'],0,200).'... Read More'.'</p>';
+                        echo '</article>';
+                    echo '</a>';
+                    echo '<hr/>';
+                echo '</div>';}?>
 
             </div>
         </div>
