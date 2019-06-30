@@ -24,13 +24,13 @@
         <?php include "includes/header.php";?>
 
         <div class="container" style="margin-top:30px;margin-bottom:30px;">
-        <?php if($_GET['new_error']){ ?>
+        <?php if(isset($_GET['new_error'])){ ?>
             <div class="alert alert-danger alert-dismissible fade show">
             <button type="button" class="close" data-dismiss="alert">&times;</button>
             <strong><?php echo $_GET['new_error']; ?></strong>
             </div>
         <?php } ?>
-        <?php if($_GET['new_success']){ ?>
+        <?php if(isset($_GET['new_success'])){ ?>
             <div class="alert alert-success alert-dismissible fade show">
             <button type="button" class="close" data-dismiss="alert">&times;</button>
             <strong><?php echo $_GET['new_success']; ?></strong>
