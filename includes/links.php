@@ -28,4 +28,5 @@
 <!--Isotope Jquery for Blog Grid-->
 <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 
+<meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
