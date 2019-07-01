@@ -52,7 +52,7 @@
                                 <button class="removePost btn btn-outline-danger" id="removePost_<?php echo $row['id'];?>">Remove</button>
                                 &nbsp;&nbsp;<button class="approvePost btn btn-outline-info" id="approvePost_<?php echo $row['id'];?>">Approve</button>
                             </header>
-                            <p><?php echo substr($row['description'],0,100)."... ".'<a href="show.php?blogId='.$row['id'].'" target="_blank">Read More</a>';?></p>
+                            <p><?php echo substr($row['description'],0,200)."... ".'<a href="show.php?blogId='.$row['id'].'" target="_blank">Read More</a>';?></p>
                         </article>
                     <hr/>
                     </div>
