@@ -86,7 +86,7 @@
                                 echo '<video class="articleVideo" src="'.$path.'" controls="controls" style="width:100%;">';
                                 echo '</video>';
                                 } }
-                                echo '<h2>'.$row['title'].'</h2>';
+                                echo '<h3>'.$row['title'].'</h3>';
                             echo '</header>';
                             echo '<p>'.substr($row['description'],0,200).'... Read More'.'</p>';
                         echo '</article>';
