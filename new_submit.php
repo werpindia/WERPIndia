@@ -1,8 +1,8 @@
 <?php require "includes/common.php";
 $uId=$_SESSION['id'];
 $title=mysqli_real_escape_string($con,$_POST['title']);
-$description1=mysqli_real_escape_string($con,$_POST['description']);
-$description=strip_tags($description1, '<br><strong><em><p><ul><li>');
+$description=mysqli_real_escape_string($con,$_POST['description']);
+//$description=strip_tags($description1, '<br><strong><em><p><ul><li>');
 $status='pending';
 
 if(file_exists($_FILES['uploadedFile']['tmp_name']) && is_uploaded_file($_FILES['uploadedFile']['tmp_name'])) {
