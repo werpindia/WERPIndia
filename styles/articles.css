@@ -31,8 +31,8 @@ a.articleLink>article{
 a.articleLink>article:hover{
     transform:scale(1.05);
 }
-article>header>h2{
-    padding:5px 5px 0 5px;
+article>header>h3{
+    padding:8px 8px 0 8px;
 }
 article>header>img{
     width:100%;
@@ -43,12 +43,13 @@ article>header>video{
 }
 article>header{
     text-align:center;
-    font-style: italic;
-    font-family:aclonica;
+    font-weight:bold;
+    font-family:Aclonica,Palatino,Georgia,serif;
 }
 article>p{
-    text-align:justify;
-    text-justify: newspaper;
+    text-align:left;
+    font-style:italic;
+    /*text-justify: newspaper;*/
     padding:15px;
     text-decoration: none;
 }
