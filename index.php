@@ -14,7 +14,7 @@
         <!--Carousel-->
         <div id="topCarousel" class="carousel slide" data-interval="3000" data-ride="carousel">
             <!-- Indicators -->
-            <ul class="carousel-indicators">
+            <ul class="carousel-indicators" style="z-index:1;">
                 <li data-target="#topCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#topCarousel" data-slide-to="1"></li>
                 <li data-target="#topCarousel" data-slide-to="2"></li>
@@ -95,7 +95,7 @@
                                 echo '<video class="articleVideo" src="'.$path.'" controls="controls" style="width:100%;">';
                                 echo '</video>';
                                 } }
-                                echo '<h2>'.$row['title'].'</h2>';
+                                echo '<h3>'.$row['title'].'</h3>';
                             echo '</header>';
                             echo '<p>'.substr($row['description'],0,200).'... Read More'.'</p>';
                         echo '</article>';
