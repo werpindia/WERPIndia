@@ -3,8 +3,11 @@
     /*background-image:linear-gradient(to right,#C5D2DB,rgb(184,206,221),#E7B183);*/
 }
 body{
+    height:100vh;
     background-image:linear-gradient(to right,#C5D2DB,rgb(184,206,221),#E7B183) ;
 }
+
+
 /*Removing margin-top and margin-bottom (set above) for mobile devices so that background image covers entire viewport below navbar*/
 @media screen and (max-width:576px){
     .container{
@@ -12,7 +15,7 @@ body{
     }
 }
 div.blogRow{
-    padding-top:10px;
+    padding-top:20px;
 }
 
 
@@ -24,12 +27,8 @@ a.articleLink{
     color:inherit;
     text-decoration:none;
 }
-/*Raise the article on hover*/
 a.articleLink>article{
     transition:all .2s ease-in-out;
-}
-a.articleLink>article:hover{
-    transform:scale(1.05);
 }
 article>header>h3{
     padding:8px 8px 0 8px;
@@ -53,18 +52,16 @@ article>p{
     padding:15px;
     text-decoration: none;
 }
-/*shadow effect for article on hover*/
-article:hover{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
+
 /*For mobile devices, make shadow effect default and not on hover*/
-@media screen and (max-width:576px){
+/*@media screen and (max-width:576px){
     article{
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
-}
-/*For tablets and large devices, add blog image focus effect on hover*/
+}*/
+/*For tablets and large devices*/
 @media screen and (min-width:768px){
+    /* add blog image focus effect on hover */
     .focus{
         border:0px solid #E7B183;
         border-radius:0; 
@@ -73,5 +70,13 @@ article:hover{
     .focus:hover{
         border: 30px solid #E7B183;
         border-radius: 50%;
+    }
+    /*Raise the article on hover*/
+    a.articleLink>article:hover{
+        transform:scale(1.05);
+    }
+    /*shadow effect for article on hover*/
+    article:hover{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 }
