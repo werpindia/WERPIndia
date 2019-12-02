@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Error - MyVoice</title>
+        <title>Error | MyVoice4Women</title>
         <?php include "includes/links.php";error_reporting(0);?>
         <!--Custom External stylesheet-->
         <link rel="stylesheet" type="text/css" href="./styles/header.css"/>
@@ -35,9 +35,25 @@
     </head>
 
     <body>
+        <!--WERP India Menu Bar-->
+        <div class="navList2">
+            <ul>
+                <li><a href="aboutus.html" target="_blank">About Us</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="https://www.youtube.com/watch?v=_vabo-oP44c" target="_blank">Women TV</a></li>
+                <li><a href="#">Research Domain</a></li>
+                <li><a href="#">Publications</a></li>
+                <li><a href="#">Get Involved</a></li>
+            </ul>
+        </div>
 
         <!--Navbar-->
         <?php include "includes/header.php";?>
+
+        <!--Icon for small devices to open WERP India Menu bar-->
+        <div>
+            <i class="navBar2-menu fas fa-plus-square"></i>
+        </div>
         
         <!--Error Message-->
         <div id="center" class="container item">

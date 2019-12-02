@@ -12,12 +12,13 @@ if($num>0){
     header('location:login.php?signup_error=User ID already exists!');
 }
 else{
-	$query="INSERT INTO users(name,email,password,role) VALUES ('$name','$email','$enpassword','Yes')";
+	$query="INSERT INTO users(name,email,password,role) VALUES ('$name','$email','$enpassword','author')";
 	$run_query=mysqli_query($con,$query) or die(mysqli_error($con));
     $q="SELECT id FROM users WHERE email='$email'";
     $run_q=mysqli_query($con,$q) or die(mysqli_error($con));
     $_SESSION['id']=(mysqli_fetch_array($run_q))['id'];
-	$_SESSION['email']=$email;echo "SignUp Successful !";
+	$_SESSION['email']=$email;
+	//echo "SignUp Successful !";
 	header('location:index.php');
 }
 ?>

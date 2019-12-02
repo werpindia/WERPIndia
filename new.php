@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>New Blog - MyVoice</title>
+        <title>New Blog | MyVoice4Women</title>
         <?php include "includes/links.php";error_reporting(0);?>
         <!--Custom External stylesheet-->
         <link rel="stylesheet" type="text/css" href="styles/header.css"/>

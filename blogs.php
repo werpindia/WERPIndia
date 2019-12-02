@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Blogs - MyVoice</title>
+        <title>All Blogs | MyVoice4Women</title>
         <?php include "includes/links.php";?>
         <link rel="stylesheet" type="text/css" href="styles/header.css"/>
         <link rel="stylesheet" type="text/css" href="styles/articles.css"/>
@@ -48,7 +48,13 @@
                 }
                 $no_of_records_per_page=10;
                 $offset=($pageno-1)*$no_of_records_per_page;
-                $total_pages_query="SELECT COUNT(*) FROM blogs WHERE status='posted'";
+                if(isset($_GET['userId'])){
+                    $var=$_GET['userId'];
+                    $total_pages_query="SELECT COUNT(*) FROM users_blogs ub INNER JOIN blogs b ON ub.blog_id=b.id WHERE ub.user_id='$var' AND b.status='posted'";
+                }
+                else{
+                    $total_pages_query="SELECT COUNT(*) FROM blogs WHERE status='posted'";
+                }
                 $run_total_pages_query=mysqli_query($con,$total_pages_query) or die(mysqli_error($con));
                 $total_rows = mysqli_fetch_array($run_total_pages_query)[0];
                 $total_pages = ceil($total_rows / $no_of_records_per_page);
@@ -87,8 +93,8 @@
                                 echo '</video>';
                                 } }
                                 echo '<h3>'.$row['title'].'</h3>';
-                            echo '</header>';
-                            echo '<p>'.substr($row['description'],0,200).'... Read More'.'</p>';
+                            echo '</header><br/>';
+                            echo '<p>'.substr(strip_tags($row['description']),0,200).'... Read More'.'</p>';
                         echo '</article>';
                     echo '</a>';
                     echo '<hr/>';
@@ -96,14 +102,25 @@
             </div>
             <!--Pagination bar-->
             <ul class="pagination">
-                <li class="page-item"><a class="page-link" href="?pageno=1">First</a></li>
-                <li class="page-item <?php if($pageno<=1){ echo 'disabled'; } ?>">
-                    <a class="page-link" href="<?php if($pageno<=1){ echo '#'; } else { echo "?pageno=".($pageno - 1); } ?>">Prev</a>
-                </li>
-                <li class="page-item <?php if($pageno>=$total_pages){ echo 'disabled'; } ?>">
-                    <a class="page-link" href="<?php if($pageno>=$total_pages){ echo '#'; } else { echo "?pageno=".($pageno+1); } ?>">Next</a>
-                </li>
-                <li class="page-item"><a class="page-link" href="?pageno=<?php echo $total_pages; ?>">Last</a></li>
+                <?php if(isset($_GET['userId'])){ ?>
+                    <li class="page-item"><a class="page-link" href="?userId=<?php echo $_GET['userId'];?>&pageno=1">First</a></li>
+                    <li class="page-item <?php if($pageno<=1){ echo 'disabled'; } ?>">
+                        <a class="page-link" href="<?php if($pageno<=1){ echo '#'; } else { echo "?userId=".$_GET['userId']."&pageno=".($pageno - 1); } ?>">Prev</a>
+                    </li>
+                    <li class="page-item <?php if($pageno>=$total_pages){ echo 'disabled'; } ?>">
+                        <a class="page-link" href="<?php if($pageno>=$total_pages){ echo '#'; } else { echo "?userId=".$_GET['userId']."&pageno=".($pageno+1); } ?>">Next</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="?userId=<?php echo $_GET['userId'];?>&pageno=<?php echo $total_pages; ?>">Last</a></li>
+                <?php } else{ ?>
+                    <li class="page-item"><a class="page-link" href="?pageno=1">First</a></li>
+                    <li class="page-item <?php if($pageno<=1){ echo 'disabled'; } ?>">
+                        <a class="page-link" href="<?php if($pageno<=1){ echo '#'; } else { echo "?pageno=".($pageno - 1); } ?>">Prev</a>
+                    </li>
+                    <li class="page-item <?php if($pageno>=$total_pages){ echo 'disabled'; } ?>">
+                        <a class="page-link" href="<?php if($pageno>=$total_pages){ echo '#'; } else { echo "?pageno=".($pageno+1); } ?>">Next</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="?pageno=<?php echo $total_pages; ?>">Last</a></li>
+                <?php }?>
             </ul>
         </div>
 

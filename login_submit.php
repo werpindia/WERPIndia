@@ -8,12 +8,30 @@ $num_rows=mysqli_num_rows($run_query);
 if($num_rows==0){
 	header('location:login.php?login_error=Incorrect Login Details!');}
 else{
-	$row=mysqli_fetch_array($run_query);
 	if(isset($_POST['adminCheck'])&&$_POST['adminCheck']=='Yes'){
-		$_SESSION['role']=$row['role'];
+	    $flag=0;
+	    while($row=mysqli_fetch_array($run_query)){
+	        if($row['role']=='admin'){
+		        $_SESSION['role']=$row['role'];
+		        $_SESSION['id']=$row['id'];
+	            $_SESSION['email']=$row['email'];
+	            $flag=1;
+	            break;
+	        }
+	    }
+	    if($flag==1){
+	        header('location:index.php');
+	    }
+	    else{
+	        header('location:login.php?login_error=Sorry, you do not have admin privileges!');   
+	    }
 	}
-	$_SESSION['id']=$row['id'];
-	$_SESSION['email']=$row['email'];
-	header('location:index.php');
+	else{
+	    $row=mysqli_fetch_array($run_query);
+	    $_SESSION['id']=$row['id'];
+	    $_SESSION['email']=$row['email'];
+	    header('location:index.php');
+	}
+	
 }
 ?>

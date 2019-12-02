@@ -1,7 +1,13 @@
 <?php require "includes/common.php";
 $uId=$_SESSION['id'];
+
+//Get username from id
+$run_q=mysqli_query($con,"SELECT name FROM users WHERE id=".$uId) or die(mysqli_error($con));
+$name_row=mysqli_fetch_array($run_q);
+$author_name=mysqli_real_escape_string($con,$name_row['name']);
+
 $title=mysqli_real_escape_string($con,$_POST['title']);
-$description=mysqli_real_escape_string($con,$_POST['description']);
+$description='<em>By '.$author_name.'</em>&nbsp;&circledcirc;<hr/>'.mysqli_real_escape_string($con,$_POST['description']);
 //$description=strip_tags($description1, '<br><strong><em><p><ul><li>');
 $status='pending';
 

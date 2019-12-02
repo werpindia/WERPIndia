@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Verification - MyVoice</title>
+        <title>Verification | MyVoice4Women</title>
         <?php include "includes/links.php";error_reporting(0);?>
         <!--Custom External stylesheet-->
         <link rel="stylesheet" type="text/css" href="styles/header.css"/>
@@ -29,7 +29,7 @@
         <div class="container" style="margin-top:30px;margin-bottom:30px;">
             <div class="row">
                 <?php while($row=mysqli_fetch_array($run_query)){?>
-                    <div class="offset-2 col-8">
+                    <div class="offset-1 col-10">
                        <article>
                             <header>
                                 <?php if($row['file_id']==null){?>
@@ -51,8 +51,8 @@
                                 <h2><?php echo $row['title'];?></h2><br/>
                                 <button class="removePost btn btn-outline-danger" id="removePost_<?php echo $row['id'];?>">Remove</button>
                                 &nbsp;&nbsp;<button class="approvePost btn btn-outline-info" id="approvePost_<?php echo $row['id'];?>">Approve</button>
-                            </header>
-                            <p><?php echo substr($row['description'],0,200)."... ".'<a href="show.php?blogId='.$row['id'].'" target="_blank">Read More</a>';?></p>
+                            </header><br/>
+                            <p><?php echo substr(strip_tags($row['description']),0,200)."... ".'<a href="show.php?blogId='.$row['id'].'" target="_blank">Read More</a>';?></p>
                         </article>
                     <hr/>
                     </div>

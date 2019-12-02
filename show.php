@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Read Blog - MyVoice</title>
+        <title>Read Blog | MyVoice4Women</title>
         <?php include "includes/links.php";error_reporting(0);?>
         <!--Custom External stylesheet-->
         <link rel="stylesheet" type="text/css" href="styles/header.css"/>
@@ -53,10 +53,23 @@
                         </video>
                     <?php     } 
                     }?>
-                    <h2><?php echo $row['title'];?></h2>
+                    <br/><h2><?php echo $row['title'];?></h2>
+                    <script>
+                        let title_new="<?php echo htmlspecialchars($row['title']); ?>";
+                        document.getElementsByTagName("title")[0].innerHTML=title_new+" | MyVoice4Women";
+                    </script>
                 </header>
                 <?php echo $row['description'];?>
             </article>
+            <!--Share buttons-->
+            <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                <a class="a2a_button_twitter"></a>
+                <a class="a2a_button_facebook"></a>
+                <a class="a2a_button_whatsapp"></a>
+                <a class="a2a_button_email"></a>
+                <a class="a2a_button_linkedin"></a>
+            </div>
+            <script async src="https://static.addtoany.com/menu/page.js"></script>
         </div>  
 
 
