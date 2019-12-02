@@ -15,9 +15,6 @@ Resized:https://i.ibb.co/4MvBfYC/carousel.jpg
 Original:https://quotefancy.com/media/wallpaper/3840x2160/1544149-Mahnaz-Afkhami-Quote-Women-s-empowerment-is-intertwined-with.jpg
 Resized:https://i.ibb.co/sgKbcZV/carousel4.jpg
 
-Original:https://2.bp.blogspot.com/-pjPTvPoR44M/WdMjOsXRQwI/AAAAAAAAAOw/8wl53jgeCSEOLIMuxWJfK_mCEZ9FNx3uQCLcBGAs/s1600/Woman-Silhouette-HD-Wallpaper-Free.jpg
-Resized:https://i.ibb.co/gdbHbs5/carousel2.png
-
 
 ## Image Link for Navbar logo:
 http://www.werpindia.org/images/logo.jpg
@@ -40,8 +37,3 @@ https://i.ibb.co/ZNDm012/logo.jpg
         - A ```<header>``` tag containing ```<h2>``` and ```<img>``` for the blog.
         - A ```<p>``` tag containing the first few lines from the blog.
 - ```<footer>``` at the bottom, containing contact details and map.
-
-
-## Note:
-- All links have target as "#" by default during UI designing
-- Lorem Ipsum dummy text is used for the content, initially
