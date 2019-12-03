@@ -1,0 +1,48 @@
+/* coded by Kiran V email: mail.kiranv07@gmail.com*/
+
+.container,.about{
+  line-height: 2;
+  font-weight: 400;
+}
+@media (max-width:1140px){
+  .car{
+    display: none;
+  }
+  .ft{
+    max-width: 100%!important;
+    display: block!important;
+  }
+
+}
+@media (min-width:1140px){
+  .about2{
+    display: none;
+  }
+  .p-5.car {
+     background: #06032d;
+     color: white;
+     line-height: 2;
+     font-weight: 400;
+     text-align: center;
+ }
+
+}
+footer.card {
+    background: #262161;
+    color: white;
+}
+.ft {
+    display: inline;
+    max-width: 50%;
+}
+iframe{
+    padding: 45px;
+}
+.ct {
+    text-align: center;
+    padding: 50px;
+    font-size: 46px;
+}
+span{
+  font-size: 15px;
+}
