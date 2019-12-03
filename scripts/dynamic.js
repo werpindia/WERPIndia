@@ -67,6 +67,11 @@ $(document).ready(function(){
         $(".navListMobile").toggle(500);
     });
 
+    //Icon and menu control for mobile devices
+    $(".navBar2-menu").click(function(){
+        $(".navList2").toggle(500);
+    });
+
     //Login/SignUp Forms
     $(".signup").css("display", "none");
 		$(".signbtn").click(function(){
@@ -80,7 +85,15 @@ $(document).ready(function(){
         pass.attr("type", "password");
       }
     });
-
+    $("#showhide2").click(function(){
+      var pass = $("#myinput2");
+      if (pass.attr("type") == "password") {
+        pass.attr("type", "text");
+      } else {
+        pass.attr("type", "password");
+      }
+    });
+    
     //Delete a post from "Pending" page
     $(".removePost").click(function(){
         let element=this;
@@ -155,7 +168,7 @@ function matchpass(){
         return true;  
     }  
     else{  
-        alert("your password must be same in both the field!");  
+        alert("Your password must be same in both the fields!");  
         return false;  
     }  
 }
