@@ -2,6 +2,9 @@
     box-sizing:border-box;
 }
 
+a[title="Hosted on free web hosting 000webhost.com. Host your own website for FREE."]{
+      display: none;
+}
 
 html,body
 {
@@ -24,7 +27,7 @@ body{
 }
 
 
-nav{
+nav.navBar{
     font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
     background-color:rgb(136,220, 235);
     overflow:hidden; 
@@ -121,6 +124,68 @@ div.navListMobile a:hover{
     .navList{
         display:none;
     }
+}
+
+
+/*Second menu for index.php and error.php*/
+.navList2{
+    font-weight:bold;
+}
+.navList2>ul{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    /*background-color:;*/
+}
+.navList2>ul>li{
+    margin-right:10px;
+    float:left;
+}
+.navList2>ul>li>a{
+    display:block;
+    color:rgb(18, 59, 134);
+    text-align:center;
+    padding:14px 16px;
+    text-decoration:none;
+}
+.navList2>ul>li>a:hover{
+    background-color:#111;
+    color:#ffffff;
+}
+/*Submenu for navList2*/
+.navList2>ul>li>ul.submenu{
+    display:none;
+    list-style-type:none;
+    padding:5px;
+    background-color:rgb(136,220,235);
+    /*color:rgb(232, 178, 135);*/
+}
+.navList2>ul>li>ul.submenu>li{
+    padding:2px;
+}
+.navList2>ul>li>ul.submenu>li>a{
+    color:rgb(18,59,134);
+    text-decoration:none;
+}
+.navList2>ul>li>ul.submenu>li>a:hover{
+    color:white;
+    background-color:#111;
+    text-decoration:none;
+}
+/*Menu bar icon for mobile devices*/
+.navBar2-menu{
+    display:none;
+    font-size:40px;
+    cursor: pointer;
+}
+@media screen and (max-width:799px){
+    .navList2{
+        display:none;
+    }
+    .navBar2-menu{
+        display:block;
+    }        
 }
 
 
