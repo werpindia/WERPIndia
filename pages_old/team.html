@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/animate.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/font.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/li-scroller.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/slick.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/jquery.fancybox.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/theme.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+
+<title> WERP Team</title>
+</head>
+<body>
+<style>
+    position: relative;
+    text-align:center;
+    overflow: hidden;
+    box-shadow:0 0 5px #808080;
+}
+.demo
+{
+	padding: 100px 0;
+}
+.heading-title
+{
+	margin-bottom: 100px;
+}
+.our-team img{
+    width: 100%;
+    height: auto;
+    transform: scale(1);
+    transition: all 0.40s linear 0s;
+}
+
+.our-team:hover img{
+    transform: scale(1.3);
+    transition:transform 3s linear 0s;
+}
+
+.our-team .team-content{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    opacity: 0;
+    padding: 40px 20px;
+    background: rgba(255,255,255,0.8);
+    transition: all 0.50s ease-in-out;
+}
+
+.our-team:hover .team-content{
+    opacity: 1;
+}
+
+.our-team .team-prof{
+    margin:20px 0 20px 0;
+    position:relative;
+    top:13%;
+}
+
+.our-team .team-prof a{
+    color:#1e2366;
+    font-size:18px;
+    font-weight: bold;
+    letter-spacing:1px;
+    text-transform: uppercase;
+}
+
+.our-team .team-prof a:hover{
+    color:#f15277;
+    text-decoration:none;
+}
+
+.our-team .team-prof small{
+    color:#1e2366;
+    display: block;
+    font-size:13px;
+    margin-top:10px;
+    
+}
+
+.our-team .social-link{
+    padding:0;
+    margin:0;
+    position:relative;
+    top:13%;
+}
+
+.our-team .social-link li{
+    list-style:none;
+    margin-right:5px;
+    display:inline-block;
+}
+
+.our-team .social-link li a{
+    width: 25px;
+    height: 25px;
+    line-height:25px;
+    border-radius:50%;
+    color:#fff;
+    background:rgba(0, 0, 0, 0.3);
+}
+
+.our-team .social-link li a:hover{
+    background:#add2c9 ;
+    text-decoration:none;
+}
+
+@media only screen and (max-width: 990px){
+    .our-team{  margin-bottom:20px; }
+}@charset "utf-8";
+
+
+
+</style>
+<div id="preloader">
+  <div id="status">&nbsp;</div>
+</div>
+<a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+<div class="container">
+  <header id="header">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="header_top">
+          <div class="header_top_left">
+            <ul class="top_nav">
+             <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">About</a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="vision.html">Vision4Mission</a></li>
+              <li><a href="approach.html">Our Approach</a></li>
+              <li><a href="slogan.html">Our Slogan</a></li>
+              <li><a href="team.html">Werp-India Team</a></li>
+              <li><a href="chairman.html">Our Chairman</a></li>
+            </ul>
+          </li>
+              <li><a href="contact.html">Contact</a></li>
+			   <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+          <div class="header_top_right">
+               <p id="example"></p>
+
+<script>
+var display=setInterval(function(){Time()},0);
+
+function Time()
+{
+var date=new Date();
+var time=date.toLocaleTimeString();
+document.getElementById("example").innerHTML=time;
+}
+</script>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="header_bottom">
+          <div class="logo_area"><a href="../index.html" class="logo"><img src="../images/logo.jpg" alt=""></a></div>
+		  <div class="add_banner"><a href="#"><img src="../images/ad.jpeg" alt=""></a></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section id="navArea">
+    <nav class="navbar navbar-inverse" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav main_nav">
+          <li class="active"><a href="../index.html"><span class="fa fa-home desktop-home"></span><span class="mobile-show">Home</span></a></li>
+         <!--  <li><a href="#">Technology</a></li>
+          <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Mobile</a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Android</a></li>
+              <li><a href="#">Samsung</a></li>
+              <li><a href="#">Nokia</a></li>
+              <li><a href="#">Walton Mobile</a></li>
+              <li><a href="#">Sympony</a></li>
+            </ul>
+          </li> -->
+                    <li><a href="services.html">Our Services</a></li>
+			 <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Events</a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="event1.html">Ongoing Events-Student Seminar on Women Empowerment</a></li>
+              <li><a href="event2.html">Upcoming Events</a></li>
+              
+              
+            </ul>
+          </li>
+          
+          <li><a href="https://www.youtube.com/watch?v=_vabo-oP44c">Women TV</a></li>
+          <li><a href="http://blog.werpindia.org/">W blog</a></li>
+		  <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Research Domains</a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="rd1.html">Economic Empowerment</a></li>
+              <li><a href="rd2.html">Socio-psychocultural empowerment</a></li>
+              <li><a href="rd3.html">Men Facilitation for Development (M4D)</a></li>
+              <li><a href="rd4.html">Political Empowerment</a></li>
+              <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Research Projects</a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Ongoing Projects</a></li>
+              <li><a href="#">Completed Projects</a></li>
+              
+              
+            </ul>
+            </ul>
+          </li>
+          		<li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Get Involved</a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="sponsorship.html">Sponsorship and Partners</a></li>
+              <li><a href="Volunteer4women.html">Volunteer4Women</a></li>
+              
+             
+            </ul>
+          </li>  
+		  <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Publications</a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Working Papers</a></li>
+              <li><a href="#">Research Reports</a></li>
+              <li><a href="#">Journal Articles</a></li>
+              <li><a href="#"> WER-Journal</a></li>
+            </ul>
+          </li>  
+		  
+        </ul>
+      </div>
+    </nav>
+  </section>
+ 
+  <section id="newsSection">
+    <div class="row">
+      <div class="col-lg-12 col-md-12">
+        <div class="latest_newsarea"> <span>Latest News</span>
+          <ul id="ticker01" class="news_sticker">
+           <li><a href="single_page.html">Greetings from the office of project director</a></li>
+            <li><a href="single_page2.html">Special Internship Position at Project Director Office WERP-India</a></li>
+            <li><a href="single_page3.html">  Notification to all WERP-India Team</a></li>
+            <li><a href="single_page4.html"> Ongoing Events</a></li>
+            
+          </ul>
+          <div class="social_area">
+            <ul class="social_nav">
+               <li class="facebook"><a href="https://www.facebook.com/WERPIndia.org12/"></a></li>
+              <li class=" fa fa-instagram"><a href="https://www.instagram.com/werpindia/?hl=en"></a></li>
+
+              <li class="youtube"><a href="https://www.youtube.com/watch?v=_vabo-oP44c&t=12s"></a></li>
+              <li class="mail"><a href="mailto:hr@werpindia.org" ></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> 
+   <h1 style="color:#1e2366;"><center><i> Meet the Team..</center></i> </h1>
+<div class="demo">
+        <div class="container">
+            
+
+            <div class="row col-lg-12 col-md-12 col-sm-12">
+                <div class="col-md-4 col-sm-6">
+                    <div class="our-team">
+                        <img src="../images/t1.jpg" alt="" />
+                        <div class="team-content">
+                            <h3 class="team-prof">
+                                <a href="#">Shitu Gabriel </a>
+								
+                                <small>Managing Director</small>
+                            </h3>
+							
+                            <ul class="social-link">
+                                <li><a href="https://www.facebook.com/shitu.temitope" class="fa fa-facebook"></a></li>
+                               <!-- <li><a href="#" class="fa fa-google"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-instagram"></a></li> -->
+								<li><a href="https://www.linkedin.com/in/gabriel-a-shitu-48b19563/" class="fa fa-linkedin"></a></li>
+								<li><a href="mailto:Topeshitu@gmail.com" class="fa fa-google"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="col-md-4 col-sm-6">
+                    <div class="our-team">
+                        <img src="../images/t2.jpg" alt=""  />
+                        <div class="team-content">
+                            <h3 class="team-prof">
+                                <a href="#">Ishwariya Ramanathan</a>
+                                <small>Joint  managing director & HRM</small>
+                            </h3>
+                            <ul class="social-link">
+                                <li><a href="#" class="fa fa-facebook"></a></li>
+                                <li><a href="#" class="fa fa-google"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-instagram"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+               <br>
+                <div class="col-md-4 col-sm-6">
+                    <div class="our-team">
+                        <img src="../images/t3.jpg" alt="" />
+                        <div class="team-content">
+                            <h3 class="team-prof">
+                                <a href="#">Karmendra Narain</a>
+                                <small>- Joint Managing Director (Students Communities & Projects)</small>
+                            </h3>
+                            <ul class="social-link">
+                                
+                                <li><a href="mailto:karmendra.werpindia@gmail.com" class="fa fa-google"></a></li>
+                                <li><a href="#" class="fa fa-linkedin"></a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+				<br>
+				<div class="col-md-4 col-sm-6">
+                    <div class="our-team">
+                        <img src="../images/t4.jpg" alt="" />
+                        <div class="team-content">
+                            <h3 class="team-prof">
+                                <a href="#">Gulnaz</a>
+                                <small> Project director (operations) </small>
+                            </h3>
+                            <ul class="social-link">
+                                <li><a href="mailto:naazrmgs786@gmail.com" class="fa fa-google"></a></li>
+                                <li><a href="https://www.linkedin.com/in/gulnaz-937653175" class="fa fa-linkedin"></a></li>
+                                <li><a href="https://www.instagram.com/aspiwriterz_gulnaz/?hl=en" class="fa fa-instagram"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+				<br>
+				<div class="col-md-4 col-sm-6">
+                    <div class="our-team">
+                        <img src="../images/t5.jpg" alt="" />
+                        <div class="team-content">
+                            <h3 class="team-prof">
+                                <a href="#">Vidya Lakshmi</a>
+                                <small> Project director (Web development projects) </small>
+                            </h3>
+                            <ul class="social-link">
+                                <li><a href="mailto:vidyalak98@gmail.com" class="fa fa-google"></a></li>
+                                <li><a href="https://www.linkedin.com/in/vidya-lakshmi-323bb5145/" class="fa fa-linkedin"></a></li>
+                                 <li><a href="https://www.facebook.com/VidyaLak.98" class="fa fa-facebook"></a></li>
+								 <li><a href="https://www.instagram.com/vid_.98/?hl=en" class="fa fa-instagram"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+				<br>
+				<div class="col-md-4 col-sm-6">
+                    <div class="our-team">
+                        <img src="../images/t6.jpg" alt="" />
+                        <div class="team-content">
+                            <h3 class="team-prof">
+                                <a href="#">Aayush Rakesh Butala </a>
+                                <small>Team lead for Research</small>
+                            </h3>
+                            <ul class="social-link">
+                                <li><a href="#" class="fa fa-google"></a></li>
+                                <li><a href="#" class="fa fa-linkedin"></a></li>
+                                 <li><a href="#" class="fa fa-facebook"></a></li>
+								 <li><a href="#" class="fa fa-instagram"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+				<br>
+				<div class="col-md-4 col-sm-6">
+                    <div class="our-team">
+                        <img src="../images/t7.jpg" alt="" />
+                        <div class="team-content">
+                            <h3 class="team-prof">
+                                <a href="#">Suchi Gupta   </a>
+                                <small> Team lead for Research project</small>
+                            </h3>
+                            <ul class="social-link">
+                                <li><a href="mailto:shuchigupta1994@gmail.com" class="fa fa-google"></a></li>
+                                <li><a href="https://www.linkedin.com/in/shuchi-gupta-9b26a7b2/" class="fa fa-linkedin"></a></li>
+                                <li><a href="https://www.instagram.com/shuchigupta1994/" class="fa fa-instagram"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+				<br>
+				<div class="col-md-4 col-sm-6">
+                    <div class="our-team">
+                        <img src="../images/t8.jpg" alt="" />
+                        <div class="team-content">
+                            <h3 class="team-prof">
+                                <a href="#">Debsubhra Roy  </a>
+                                <small>Team lead for graphics </small>
+                            </h3>
+                            <ul class="social-link">
+                                <li><a href="https://m.facebook.com/profile.php?id=100009583154217" class="fa fa-facebook"></a></li>
+                                <li><a href="https://www.linkedin.com/in/debsubhro-roy-480412175" class="fa fa-linkedin"></a></li>
+                             
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+				<br>
+				<div class="col-md-4 col-sm-6">
+                    <div class="our-team">
+                        <img src="../images/t9.jpg" alt="" />
+                        <div class="team-content">
+                            <h3 class="team-prof">
+                                <a href="#">S. Sri Lakshmi   </a>
+                                <small>Project Director for Me-initiatives </small>
+                            </h3>
+                            <ul class="social-link">
+                                <li><a href="https://www.instagram.com/srilakshmi_9599/" class="fa fa-instagram"></a></li>
+                                <li><a href="https://www.linkedin.com/in/srilakshmi-s-a6a017145" class="fa fa-linkedin"></a></li>
+                                <li><a href="mailto:ssrilakshmisriram@gmail.com" class="fa fa-google"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+				<br>
+				<div class="col-md-4 col-sm-6">
+                    <div class="our-team">
+                        <img src="../images/t10.jpg" alt="" />
+                        <div class="team-content">
+                            <h3 class="team-prof">
+                                <a href="#">Nidhi Kodamana   </a>
+                                <small>project director of Social Media Marketing team </small>
+                            </h3>
+                            <ul class="social-link">
+                                
+                                <li><a href="https://www.linkedin.com/in/nidhi-kodamana-225a74153" class="fa fa-linkedin"></a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+				<br>
+				<div class="col-md-4 col-sm-6">
+                    <div class="our-team">
+                        <img src="../images/t11.jpg" alt="" />
+                        <div class="team-content">
+                            <h3 class="team-prof">
+                                <a href="#">Anna Anandita   </a>
+                                <small>Joint Human Resource Manager </small>
+                            </h3>
+                            <ul class="social-link">
+                                <li><a href="https://www.instagram.com/k_anna_be/" class="fa fa-instagram"></a></li>
+                                <li><a href="https://m.facebook.com/anna.anandita" class="fa fa-facebook"></a></li>
+                                <li><a href="https://twitter.com/anna_anandita?s=09" class="fa fa-twitter"></a></li>
+								<li><a href="https://www.linkedin.com/in/annaanandita" class="fa fa-linkedin"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+				<br>
+				<div class="col-md-4 col-sm-6">
+                    <div class="our-team">
+                        <img src="../images/t12.jpg" alt="" />
+                        <div class="team-content">
+                            <h3 class="team-prof">
+                                <a href="#">Biprajit Roy   </a>
+                                <small>Project Director of Digital Marketing </small>
+                            </h3>
+                            <ul class="social-link">
+                                <li><a href="#" class="fa fa-instagram"></a></li>
+                                <li><a href="#" class="fa fa-facebook"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+								<li><a href="#" class="fa fa-linkedin"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+				<br>
+				<div class="col-md-4 col-sm-6">
+                    <div class="our-team">
+                        <img src="../images/t13.jpg" alt="" />
+                        <div class="team-content">
+                            <h3 class="team-prof">
+                                <a href="#">Nimmagadda Sai Krishna   </a>
+                                <small>Joint Human Resource Manager</small>
+                            </h3>
+                            <ul class="social-link">
+                                <li><a href="https://www.instagram.com/n.saikrishna70/" class="fa fa-instagram"></a></li>
+                                <li><a href="https://www.facebook.com/profile.php?id=100003306036144&ref=bookmarks" class="fa fa-facebook"></a></li>
+                                <li><a href="mailto:n.saikrishna493@gmail.com" class="fa fa-google"></a></li>
+								<li><a href="https://www.linkedin.com/in/sai-krishna-359682158/" class="fa fa-linkedin"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+				<br>
+				<div class="col-md-4 col-sm-6">
+                    <div class="our-team">
+                        <img src="../images/t14.jpg" alt="" />
+                        <div class="team-content">
+                            <h3 class="team-prof">
+                                <a href="#">Ashvini Prakash More   </a>
+                                <small>State Director(Maharashtra)</small>
+                            </h3>
+                            <ul class="social-link">
+                                <li><a href="#" class="fa fa-instagram"></a></li>
+                                <li><a href="#" class="fa fa-facebook"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+								<li><a href="#" class="fa fa-linkedin"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+				<br>
+				<div class="col-md-4 col-sm-6">
+                    <div class="our-team">
+                        <img src="../images/t15.jpg" alt="" />
+                        <div class="team-content">
+                            <h3 class="team-prof">
+                                <a href="#">Adwitiya Arora  </a>
+                                <small>State Director(Karnataka) </small>
+                            </h3>
+                            <ul class="social-link">
+                                <li><a href="#" class="fa fa-instagram"></a></li>
+                                <li><a href="#" class="fa fa-facebook"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+								<li><a href="#" class="fa fa-linkedin"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+				<br>
+				<div class="col-md-4 col-sm-6">
+                    <div class="our-team">
+                        <img src="../images/t16.jpg" alt="" />
+                        <div class="team-content">
+                            <h3 class="team-prof">
+                                <a href="#">Nikshep Maknoor  </a>
+                                <small>Project Director(Girls Talk Website) </small>
+                            </h3>
+                            <ul class="social-link">
+                                <li><a href="mailto:nikshepmaknoor@gmail.com" class="fa fa-google"></a></li>
+                                <li><a href="https://www.facebook.com/NikshepMaknoor" class="fa fa-facebook"></a></li>
+                                
+								<li><a href="https://www.linkedin.com/in/nikshep-maknoor" class="fa fa-linkedin"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+				<br>
+            </div>
+        </div>
+    </div>
+
+
+
+ <footer id="footer">
+    <div class="footer_top">
+      <div class="row">
+        <!--<div class="col-lg-4 col-md-4 col-sm-4">
+          <div class="footer_widget wow fadeInLeftBig">
+            <h2>Flickr Images</h2>
+          </div> -->
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <div class="footer_widget wow fadeInDown">
+            <h2>Tag</h2>
+            <ul class="tag_nav">
+              <li><a href="team.html">WERP India Team</a></li>
+              <li><a href="chairman.html">Our Chairman</a></li>
+             <!-- <li><a href="#">Fashion</a></li>
+              <li><a href="#">Business</a></li>
+              <li><a href="#">Life &amp; Style</a></li>
+              <li><a href="#">Technology</a></li>
+              <li><a href="#">Photo</a></li>
+              <li><a href="#">Slider</a></li>
+			  -->
+            </ul>
+          </div>
+        </div>
+         <div class="col-lg-4 col-md-4 col-sm-4">
+          <div class="footer_widget wow fadeInRightBig">
+            <h2>Contact</h2>
+            <p> Email: hr@werpindia.org </p>
+            <address>
+            T-318/10, First floor, Balijeet Nagar, New Delhi-08
+            </address>
+          </div>
+        </div>
+		<div class="col-lg-4 col-md-4 col-sm-4">
+		
+		<div class="mapouter"><div class="gmap_canvas"><iframe width="300" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=t-318%20block%20b%20baljit%20nagar%20delhi%20110008&t=k&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.pureblack.de/webdesign-darmstadt/"></a></div><style>.mapouter{text-align:right;height:300px;width:300px;}.gmap_canvas {overflow:hidden;background:none!important;height:300px;width:300px;}</style></div>
+	  </div>
+    <div class="footer_bottom">
+      <p class="copyright">Copyright &copy;  <a href="../index.html">WERP_India</a></p>
+     
+    </div>
+  </footer>
+</div>
+<script src="../assets/js/jquery.min.js"></script> 
+<script src="../assets/js/wow.min.js"></script> 
+<script src="../assets/js/bootstrap.min.js"></script> 
+<script src="../assets/js/slick.min.js"></script> 
+<script src="../assets/js/jquery.li-scroller.1.0.js"></script> 
+<script src="../assets/js/jquery.newsTicker.min.js"></script> 
+<script src="../assets/js/jquery.fancybox.pack.js"></script> 
+<script src="../assets/js/custom.js"></script>
+
+</body>
+</html>
